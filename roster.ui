@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>roster</class>
+ <widget class="QDialog" name="roster">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1080</width>
+    <height>677</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#roster{
+background-color: #2a6496;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_11">
+   <item row="0" column="1">
+    <widget class="QFrame" name="frame_6">
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_9">
+      <item row="0" column="0">
+       <widget class="QFrame" name="frame_7">
+        <property name="styleSheet">
+         <string notr="true">/* Style the info_frame element */
+#frame_7 {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+/* Style for labels, input fields, and combo boxes inside &quot;info_frame&quot; */
+#frame_7 QLabel,
+#frame_7 QLineEdit,
+#frame_7 QComboBox {
+    font-family: Segoe UI Semibold;
+    font-size: 12px;
+}
+
+/* Style for input fields and combo boxes inside info_frame */
+#frame_7 QLineEdit,
+#frame_7 QComboBox {
+    padding: 4px 5px; /* Corrected padding */
+    border: 1px solid #838383;
+    border-radius: 2px;
+}
+
+/* Focus style for input fields and combo boxes inside info_frame */
+#frame_7 QLineEdit:focus,
+#frame_7 QComboBox:focus {
+    border-color: #0055ff;
+}
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_17">
+           <item>
+            <widget class="QLabel" name="searchbyIDlabel">
+             <property name="text">
+              <string>Search Student</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="searchbyIDlineEdit"/>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="searchpushButton_3">
+           <property name="text">
+            <string>Search</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>search_Icon.svg</normaloff>search_Icon.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="refreshPushButton">
+           <property name="text">
+            <string>Refresh</string>
+           </property>
+           <property name="icon">
+            <iconset theme="QIcon::ThemeIcon::ViewRefresh"/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QFrame" name="frame_9">
+        <property name="styleSheet">
+         <string notr="true">/* Style the info_frame element */
+#frame_9 {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+/* Style for labels, input fields, and combo boxes inside &quot;info_frame&quot; */
+#frame_9 QLabel,
+#frame_9 QLineEdit,
+#frame_9 QComboBox {
+    font-family: Segoe UI Semibold;
+    font-size: 12px;
+}
+
+/* Style for input fields and combo boxes inside info_frame */
+#frame_9 QLineEdit,
+#frame_9 QComboBox {
+    padding: 4px 5px; /* Corrected padding */
+    border: 1px solid #838383;
+    border-radius: 2px;
+}
+
+/* Focus style for input fields and combo boxes inside info_frame */
+#frame_9 QLineEdit:focus,
+#frame_9 QComboBox:focus {
+    border-color: #0055ff;
+}
+
+/* Style for function_frame QPushButton */
+#frame_9 QPushButton {
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    background-color: #84e8f7;
+}
+/*Style delete btn*/
+
+#frame_9 #deletepushButton{
+background-color: #ff8183;
+}
+
+/*Hover Style for buttons insided the function_frame*/
+#frame_9 QPushButton:hover{
+border-color: #4c96f7;
+font-size: 15px;
+}
+
+ </string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_7">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="savepushButton">
+           <property name="text">
+            <string>Save</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>add_icon.svg</normaloff>add_icon.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="updatepushButton">
+           <property name="text">
+            <string>Update</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>update_icon.svg</normaloff>update_icon.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="clearpushButton_2">
+           <property name="text">
+            <string>Clear</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>clear_Icon.svg</normaloff>clear_Icon.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="deletepushButton">
+           <property name="text">
+            <string>DELETE</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>delete_Icons.svg</normaloff>delete_Icons.svg</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QFrame" name="frame_8">
+        <property name="styleSheet">
+         <string notr="true">/* Style the info_frame element */
+#frame_8{
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+/* Style for labels, input fields, and combo boxes inside &quot;info_frame&quot; */
+#frame_8 QLabel,
+#frame_8 QLineEdit,
+#frame_8 QComboBox {
+    font-family: Segoe UI Semibold;
+    font-size: 12px;
+}
+
+/* Style for input fields and combo boxes inside info_frame */
+#frame_8 QLineEdit,
+#frame_8 QComboBox {
+    padding: 4px 5px; /* Corrected padding */
+    border: 1px solid #838383;
+    border-radius: 2px;
+}
+
+/* Focus style for input fields and combo boxes inside info_frame */
+#frame_8 QLineEdit:focus,
+#frame_8 QComboBox:focus {
+    border-color: #0055ff;
+}
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_8">
+         <item row="0" column="0">
+          <widget class="QTableWidget" name="rosterDatatableWidget">
+           <property name="styleSheet">
+            <string notr="true">#datatableWidget {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+}</string>
+           </property>
+           <property name="showGrid">
+            <bool>true</bool>
+           </property>
+           <property name="gridStyle">
+            <enum>Qt::PenStyle::DashLine</enum>
+           </property>
+           <attribute name="horizontalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderMinimumSectionSize">
+            <number>35</number>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>100</number>
+           </attribute>
+           <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderDefaultSectionSize">
+            <number>30</number>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_10">
+      <item row="1" column="0">
+       <widget class="QFrame" name="frame_4">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Style the info_frame element */
+#frame_4 {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+/* Style for labels, input fields, and combo boxes inside &quot;info_frame&quot; */
+#frame_4 QLabel,
+#frame_4 QLineEdit,
+#frame_4 QComboBox {
+    font-family: Segoe UI Semibold;
+    font-size: 12px;
+}
+
+/* Style for input fields and combo boxes inside info_frame */
+#frame_4 QLineEdit,
+#frame_4 QComboBox {
+    padding: 4px 5px; /* Corrected padding */
+    border: 1px solid #838383;
+    border-radius: 2px;
+}
+
+/* Focus style for input fields and combo boxes inside info_frame */
+#frame_4 QLineEdit:focus,
+#frame_4 QComboBox:focus {
+    border-color: #0055ff;
+}
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QLabel" name="studentIDlabel_2">
+               <property name="text">
+                <string>Student's ID</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="showStudenIDlineEdit_2"/>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_20">
+               <item>
+                <widget class="QLabel" name="gradelabel_2">
+                 <property name="text">
+                  <string>Grade</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="gradelineEdite_2"/>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="studentIDlabel_3">
+             <property name="text">
+              <string>FristName</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="firstnamelineEdit">
+             <property name="font">
+              <font>
+               <family>Segoe UI Semibold</family>
+               <pointsize>-1</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_21">
+             <item>
+              <widget class="QLabel" name="gradelabel_3">
+               <property name="text">
+                <string>LastName</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lastnamelineEdit">
+               <property name="font">
+                <font>
+                 <family>Segoe UI Semibold</family>
+                 <pointsize>-1</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="autoFillBackground">
+                <bool>false</bool>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QFrame" name="frame_5">
+        <property name="styleSheet">
+         <string notr="true">/* Style the info_frame element */
+#frame_5 {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+/* Style for labels, input fields, and combo boxes inside &quot;info_frame&quot; */
+#frame_5 QLabel,
+#frame_5 QLineEdit,
+#frame_5 QComboBox {
+    font-family: Segoe UI Semibold;
+    font-size: 12px;
+}
+
+/* Style for input fields and combo boxes inside info_frame */
+#frame_5 QLineEdit,
+#frame_5 QComboBox {
+    padding: 4px 5px; /* Corrected padding */
+    border: 1px solid #838383;
+    border-radius: 2px;
+}
+
+/* Focus style for input fields and combo boxes inside info_frame */
+#frame_5 QLineEdit:focus,
+#frame_5 QComboBox:focus {
+    border-color: #0055ff;
+}
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="1" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_15">
+             <item>
+              <widget class="QLabel" name="label_1">
+               <property name="text">
+                <string>E_SCIENCE</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="esciencelineEdit"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_13">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>AMHARIC</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="amhariclineEdit"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>HERREGA</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="herregalineEdit">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>ENGLISH</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="engilishlineEdit"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>SPOKEN</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="spokenlineEdit"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <widget class="QLabel" name="label_6">
+               <property name="text">
+                <string>OROMIC</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="oromiclineEdit"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string>SAFUU</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="safulineEdit"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="1">
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_14">
+             <item>
+              <widget class="QLabel" name="label_8">
+               <property name="text">
+                <string>G_SCIENCE</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="gsciencelineEdit"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QLabel" name="label_9">
+               <property name="text">
+                <string>OG-AARTII</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="ogartilineEdit"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QLabel" name="label_10">
+               <property name="text">
+                <string>MATHS</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="mathslineEdit"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_11">
+               <property name="text">
+                <string>GADA</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="gadalineEdit"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QLabel" name="label_12">
+               <property name="text">
+                <string>ICT</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="ictlineEdit"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_12">
+             <item>
+              <widget class="QLabel" name="label_13">
+               <property name="text">
+                <string>FJQ</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="fjqlineEdit"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="semsterlabel_3">
+             <property name="text">
+              <string>Semester</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="semesterlineEdit"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QFrame" name="frame_10">
+        <property name="styleSheet">
+         <string notr="true">/* Style the info_frame element */
+#frame_10{
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+/* Style for labels, input fields, and combo boxes inside &quot;info_frame&quot; */
+#frame_10 QLabel,
+#frame_10 QLineEdit,
+#frame_10 QComboBox {
+    font-family: Segoe UI Semibold;
+    font-size: 12px;
+}
+
+/* Style for input fields and combo boxes inside info_frame */
+#frame_10 QLineEdit,
+#frame_10 QComboBox {
+    padding: 4px 5px; /* Corrected padding */
+    border: 1px solid #838383;
+    border-radius: 2px;
+}
+
+/* Focus style for input fields and combo boxes inside info_frame */
+#frame_10 QLineEdit:focus,
+#frame_10 QComboBox:focus {
+    border-color: #0055ff; 
+
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout_19">
+           <item>
+            <widget class="QLabel" name="averagelabel">
+             <property name="text">
+              <string>Average:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="showaveragelabel">
+             <property name="text">
+              <string>000</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_18">
+           <item>
+            <widget class="QLabel" name="totallabel">
+             <property name="text">
+              <string>Total:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="showtatallabel">
+             <property name="text">
+              <string>000</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QFrame" name="frame_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Style the info_frame element */
+#frame_2 {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+/* Style for labels, input fields, and combo boxes inside &quot;info_frame&quot; */
+#frame_2 QLabel,
+#frame_2 QLineEdit,
+#frame_2 QComboBox {
+    font-family: Segoe UI Semibold;
+    font-size: 12px;
+}
+
+/* Style for input fields and combo boxes inside info_frame */
+#frame_2 QLineEdit,
+#frame_2 QComboBox {
+    padding: 4px 5px; /* Corrected padding */
+    border: 1px solid #838383;
+    border-radius: 2px;
+}
+
+/* Focus style for input fields and combo boxes inside info_frame */
+#frame_2 QLineEdit:focus,
+#frame_2 QComboBox:focus {
+    border-color: #0055ff;
+}
+
+/*Style delete btn*/
+
+
+/*Hover Style for buttons insided the function_frame*/
+#frame_2 QPushButton:hover{
+border-color: #4c96f7;
+font-size: 15px;
+}
+
+
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="2" column="1">
+          <widget class="QPushButton" name="searchpushButton_2">
+           <property name="text">
+            <string>Search</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>search_Icon.svg</normaloff>search_Icon.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" rowspan="3">
+          <widget class="QFrame" name="frame_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Shape::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Shadow::Raised</enum>
+           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <item>
+               <widget class="QLabel" name="studentIDlabel">
+                <property name="text">
+                 <string>Student's ID</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="showStudenIDlineEdit_1"/>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <widget class="QLabel" name="gradelabel">
+                <property name="text">
+                 <string>Grade</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="gradelineEdit_1"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="clearpushButton">
+           <property name="text">
+            <string>Clear</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>clear_Icon.svg</normaloff>clear_Icon.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
